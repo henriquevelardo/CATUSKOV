@@ -1,0 +1,12 @@
+body {
+    background-color: #3b2967;
+}
+
+header h1 a {
+    background: url(images/catuskov.png) no-repeat;
+    text-align: center;
+    display:block; 
+    height:50em;
+	width:100%;
+	margin: 0 auto;
+}
