@@ -2,6 +2,8 @@ body {
     background-color: #5a155e;
     font-family: 'Maven Pro', sans-serif;
    /* background-image: url(images/background.png);*/
+   margin: 0 ;
+    padding: 0 ;
 }
 
 /* header h1  {
@@ -10,11 +12,11 @@ body {
     height:16.555555em;
 	width:11em;
 	margin: 0 auto;
-} */
+} */ 
 .center {
     margin: 0 auto;
     max-width: 1200px;
-    width:00px;
+    width:1200px;
 }
 header h1 {
     text-align: center;
@@ -33,13 +35,24 @@ header h2 {
 }
 nav ul li {
     display:inline;
-    margin:0 30px 0 0;
-    padding: 5px  30px 5px 30px;
+    margin:0px 0px 0px 0px;
+    padding: 0.4375em  1.25em 0.4375em 1.25em;
     float:right;
     color:white;
     background-color:#331135;
 }
 nav ul li:hover {
+    background-color:#e4a909;
+    color:white;
+}
+nav ul li:active {
     background-color:#b3b1b3;
     color:black;
+}
+section iframe {
+    border:0;
+    margin:50px 0 0 0;
+    padding:0;
+    width:100%;
+    outline:0;
 }
