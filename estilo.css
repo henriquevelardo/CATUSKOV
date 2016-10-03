@@ -1,12 +1,25 @@
 body {
-    background-color: #3b2967;
+    background-color: #1e1e1e;
+    background-image: url(images/background.png);
 }
 
-header h1 a {
+/* header h1  {
     background: url(images/catuskov.png) no-repeat;
-    text-align: center;
-    display:block; 
-    height:50em;
-	width:100%;
+    background-size: 60%;
+    height:16.555555em;
+	width:11em;
 	margin: 0 auto;
+} */
+header h1 {
+    text-align: center;
 }
+header h1 img {
+    width:17%;
+    margin:0 auto;
+    text-align:center;
+}
+/*.center {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}*/
