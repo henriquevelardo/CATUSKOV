@@ -1,6 +1,7 @@
 body {
-    background-color: #1e1e1e;
-    background-image: url(images/background.png);
+    background-color: #5a155e;
+    font-family: 'Maven Pro', sans-serif;
+   /* background-image: url(images/background.png);*/
 }
 
 /* header h1  {
@@ -10,16 +11,35 @@ body {
 	width:11em;
 	margin: 0 auto;
 } */
-header h1 {
-    text-align: center;
-}
-header h1 img {
-    width:17%;
-    margin:0 auto;
-    text-align:center;
-}
 .center {
     margin: 0 auto;
     max-width: 1200px;
-    width: 100%;
+    width:00px;
+}
+header h1 {
+    text-align: center;
+    margin:0;
+    clear:right;
+    clear:top;
+}
+header h1 img {
+    width:7.22223em;
+    padding: 0;
+    margin: -3% 0% 0% 0%;
+}
+header h2 {
+    text-align:center;
+    margin:0;
+}
+nav ul li {
+    display:inline;
+    margin:0 30px 0 0;
+    padding: 5px  30px 5px 30px;
+    float:right;
+    color:white;
+    background-color:#331135;
+}
+nav ul li:hover {
+    background-color:#b3b1b3;
+    color:black;
 }
