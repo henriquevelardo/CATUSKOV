@@ -25,9 +25,9 @@ header h1 {
     clear:top;
 }
 header h1 img {
-    width:7.22223em;
+    width:6.92223em;
     padding: 0;
-    margin: -3% 0% 0% 0%;
+    margin: -4% 0% 0% 0%;
 }
 header h2 {
     text-align:center;
@@ -35,7 +35,7 @@ header h2 {
 }
 nav ul li {
     display:inline;
-    margin:0px 0px 0px 0px;
+    margin:0.625em 0.625em 0px 0px;
     padding: 0.4375em  1.25em 0.4375em 1.25em;
     float:right;
     color:white;
