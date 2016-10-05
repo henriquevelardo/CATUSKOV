@@ -9,10 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="w3.css">
     <script type="text/javascript" src="carregarPagina.js"></script>
-    
+    <link rel="stylesheet" href="/w3.css">
+    <!-- <script type="text/javascript" src="carregarPagina.js"></script> !-->
 </head>
-<body onload="myFunction()" style="margin:0;">
-    <div id="loader"></div>
+<body>
+ 
+    <!--<div id="loader"></div> !-->
 <div class="center">
     <header>
         <nav>
@@ -35,7 +37,59 @@
     <footer>
         <section>
             <img class="w3-animate-left" src="images/catuskov.png"/>
+            <article>
+                <p class="p1"> COPYRIGHT © - <span style="color:green">CATU</span><span style="color:yellow">SKOV</span> - Inc. Webservice © - Lucca Dias - Henrique Lima - Felipe Gomes</p>
+            </article>
         </section>    
     </footer>
+
+    <script>
+
+// JS ===================================================
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'),
+  {
+    zoom: 19,
+    center: {lat: -23.5469081, lng: -46.6490942}
+  });
+
+  setMarkers(map);
+}
+var beaches = [
+  ['indefindo', -33.890542, 151.274856, 4],
+  ['Jimba bar', -23.546635, -46.649086, 5],
+  ['Sucessos', -23.547009, -46.649069, 3],
+  ['Deskolados', -23.547043, -46.648911, 2],
+  ['Morsas', -23.547249, -46.648822, 1]
+];
+
+function setMarkers(map) {
+  var image = {
+    url: 'images/catuaba1.png',
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(0, 32)
+  };
+  var shape = {
+    coords: [1, 1, 1, 20, 18, 20, 18, 1],
+    type: 'poly'
+  };
+  for (var i = 0; i < beaches.length; i++) {
+    var beach = beaches[i];
+    var marker = new google.maps.Marker({
+      position: {lat: beach[1], lng: beach[2]},
+      map: map,
+      icon: image,
+      shape: shape,
+      title: beach[0],
+      zIndex: beach[3]
+    });
+  }
+}
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUGb1xC7vOKsa_2PbrLc9shFbvqqCf9vc&signed_in=true&callback=initMap"></script>
+    </section>
+
 </body>
 </html>
