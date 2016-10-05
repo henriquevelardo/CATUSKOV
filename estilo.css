@@ -55,4 +55,14 @@ section iframe {
     padding:0;
     width:100%;
     outline:0;
+
+}
+
+footer section {
+    height:4.2em ;
+}
+
+footer img {
+    height:5%;
+    width:5%;
 }
