@@ -59,14 +59,14 @@ section iframe {
 
 }
 
-footer article {
+footer {
     height:4.2em ;
 }
 
 footer img {
     height:95%;
     width:2%;
-    margin-left:655px;
+    margin-left:350px;
     float:left;
     clear:right;
     margin-top: 1px;
@@ -89,3 +89,11 @@ section image {
     margin-top:20px;
     color: #fff;
 }
+
+footer span {
+    color:green;
+}
+
+footer .a {
+    color:red;
+} 
