@@ -7,25 +7,30 @@
     <link rel="shortcut icon" href="images/iconecatu.ico" >
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="w3.css">
-    <script type="text/javascript" src="carregarPagina.js"></script>
     <link rel="stylesheet" href="/w3.css">
     <!-- <script type="text/javascript" src="carregarPagina.js"></script> !-->
 </head>
 <body>
- 
+  </body>
     <!--<div id="loader"></div> !-->
 <div class="center">
     <header>
         <nav>
+
         <ul class="w3-animate-top">
             <a href="#CONTATO"><li class="w3-round-xlarge"> Contato </li></a>
             <a href="#SOBRE"><li class="w3-round-xlarge"> Sobre </li></a>
             <a href="#PRODUTOS"><li class="w3-round-xlarge"> Produtos </li></a>
+
+        <ul>
+            <a href="contato.html"><li class="w3-round-xlarge"> Contato </li></a>
+            <a href="sobre.html"><li class="w3-round-xlarge"> Sobre </li></a>
+            <a href="index.html"><li class="w3-round-xlarge"> Ínicio </li></a>
+
         </ul>
         </nav>
         <h1>
-        <img class="w3-animate-top" src="images/catuskov.png"/>
+        <a href="index.html"> <img class="w3-animate-top" src="images/catuskov.png"/></a>
         </h1>
         <h2>
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fselvagemoficial%2F%3Ffref%3Dts&width=179&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId" width="190" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
@@ -33,10 +38,10 @@
     </header>
 </div>
     <section>
-        <iframe class="w3-card-8 w3-animate-right"src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1828.8208756455933!2d-46.64925129873867!3d-23.545384201331633!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1475518940455" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen> </iframe>
-    <script>
 
-// JS ===================================================
+        <iframe class="w3-card-8 w3-animate-right"src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1828.8208756455933!2d-46.64925129873867!3d-23.545384201331633!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1475518940455" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen> </iframe>
+        <div id="map"></div>
+    <script>
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'),
@@ -46,13 +51,14 @@ function initMap() {
   });
 
   setMarkers(map);
+  
 }
-var beaches = [
-  ['indefindo', -33.890542, 151.274856, 4],
-  ['Jimba bar', -23.546635, -46.649086, 5],
-  ['Sucessos', -23.547009, -46.649069, 3],
-  ['Deskolados', -23.547043, -46.648911, 2],
-  ['Morsas', -23.547249, -46.648822, 1]
+var bares = [
+  ['ENTRE AMIGOS', -23.546572, -46.648925, 4],
+  ['SUCESSOS', -23.546994, -46.649134, 5],
+  ['DESKOLADO', -23.547011, -46.648929, 3],
+  ['MORSAS', -23.547270, -46.648835, 2],
+  ['MAC BAR', -23.547255, -46.648930, 1]
 ];
 
 function setMarkers(map) {
@@ -61,26 +67,29 @@ function setMarkers(map) {
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(0, 32)
   };
-  var shape = {
+  
+   var shape = {
     coords: [1, 1, 1, 20, 18, 20, 18, 1],
     type: 'poly'
-  };
-  for (var i = 0; i < beaches.length; i++) {
-    var beach = beaches[i];
+  }; 
+  for (var i = 0; i < bares.length; i++) {
+    var bar = bares[i];
     var marker = new google.maps.Marker({
-      position: {lat: beach[1], lng: beach[2]},
+      position: {lat: bar[1], lng: bar[2]},
       map: map,
       icon: image,
       shape: shape,
-      title: beach[0],
-      zIndex: beach[3]
+      title: bar[0],
+      zIndex: bar[3]
     });
   }
 }
 
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUGb1xC7vOKsa_2PbrLc9shFbvqqCf9vc&signed_in=true&callback=initMap"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUGb1xC7vOKsa_2PbrLc9shFbvqqCf9vc&signed_in=true&callback=initMap"></script>
     </section>
+
     <footer>
             <img src="images/catuskov.png"/>
             
