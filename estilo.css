@@ -25,9 +25,20 @@ header h1 {
     clear:top;
 }
 header h1 img {
-    width:6.42223em;
+    width:6.92223em;
     padding: 0;
     margin: -4% 0% 0% 0%;
+}
+@keyframes desce{
+    from{
+        top:-300px;
+    } 
+    to{
+        top:0;
+    }}
+.logo {
+    position:relative;
+    animation:desce 0.7s;
 }
 header h2 {
     text-align:center;
@@ -49,7 +60,9 @@ nav ul li:active {
     background-color:#b3b1b3;
     color:black;
 }
-
+.botao {
+    border-radius:45px
+}
 #map {
     height: 500px;
     width:100%;
