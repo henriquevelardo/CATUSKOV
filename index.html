@@ -8,11 +8,22 @@
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="paginaface"></script>
+    <script type="text/javascript" src="bootbox.min.js"></script>
     <!-- <link rel="stylesheet" href="w3.css"> !-->
     <!-- <script type="text/javascript" src="carregarPagina.js"></script> !-->
 </head>
 <body>
   </body>
+  <div class="alert"></div>
+  <script src="bootbox.min.js"></script>
+    <script>
+        bootbox.alert({ 
+  size: "small",
+  title: "Your Title",
+  message: "Your message here…", 
+  callback: function(){ /* your callback code */ }
+})
+    </script>
     <!--<div id="loader"></div> !-->
 <div class="center">
     <header>
@@ -172,5 +183,10 @@ function setCatuSkov(map) {
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUGb1xC7vOKsa_2PbrLc9shFbvqqCf9vc&signed_in=true&callback=initMap"></script>
     </section>
+     <footer>
+        <div class="center">
+          <p>CATU<span class="skov">SKOV</span> &copy; Lucca Dias - Henrique Lima - Felipe Gomes</p>
+        </div>
+    </footer>
 </body>
 </html>
