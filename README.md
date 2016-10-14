@@ -1,5 +1,5 @@
 # CATUSKOV :beers: :ok_hand:
-- Aplicativo para você que é fã de uma **Catuaba** e **Askov**. 
+- Site para você que é fã de uma **Catuaba** e **Askov**. 
 - Ele permite você localizar os lugares proximos a você que vende essas duas bebidas.
 
 | Nome          | TIA    |
