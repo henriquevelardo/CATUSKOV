@@ -14,7 +14,7 @@
 </head>
 <body>
   </body>
-    <!--<div id="loader"></div> !-->
+    
 <div class="center">
     <header>
         <nav>
@@ -73,6 +73,20 @@ function initMap() {
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
   
+  /* --- INFOBOX ----*/
+  var infobox = '<p> CATUSKOV </p>';
+    var infobox = new google.maps.infobox({
+    content: infobox
+  });
+
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    title: 'ENTRE AMIGOS'
+  });
+  marker.addListener('click', function() {
+    infobox.open(map, marker);
+  });
 }
 /* APENAS CATUABA */
 var bares = [
