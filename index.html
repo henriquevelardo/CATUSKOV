@@ -40,7 +40,9 @@
 function initMap() {
   var entreAmigos = {lat: -23.546572, lng: -46.648925,};
   var sucessos = {lat:-23.546994, lng:-46.649134,}
-  var bares
+  var deskolado ={ lat:-23.547011, lng:-46.648929,}
+  var morsas = {lat: -23.547270,lng: -46.648835,}
+  var macbar = {lat: -23.547255,lng: -46.648930,}
   var styles = [
   {
     "elementType": "geometry",
@@ -77,7 +79,7 @@ function initMap() {
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
   
-/* --- INFOBOX ----*/
+/* --- INFOBOX (n terminada)=================================================================*/
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
@@ -101,9 +103,9 @@ function initMap() {
   });
 
   var marker = new google.maps.Marker({
-    position: bares,
+    position: entreAmigos,
     map: map,
-    title: 'bares'
+    title: 'ENTRE AMIGOS',
   });
   marker.addListener('click', function() {
     infowindow.open(map, marker);
@@ -113,12 +115,27 @@ function initMap() {
     map: map,
     title: 'SUCESSOS'
   });
+    var marker = new google.maps.Marker({
+      position:deskolado,
+      map:map,
+      title: 'DESKOLADO'
+    });
+    var marker = new google.maps.Marker({
+      position:morsas,
+      map:map,
+      title: 'MORSAS'
+    });
+    var marker = new google.maps.Marker({
+      position:macbar,
+      map:map,
+      title:'MAC BAR'
+    });
   marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
 }
 
-/* APENAS CATUABA */
+/* APENAS CATUABA =============================================================*/
 var bares = [
   ['ENTRE AMIGOS', -23.546572, -46.648925, 4],
   ['SUCESSOS', -23.546994, -46.649134, 5],
@@ -150,7 +167,7 @@ function setCatuaba(map) {
     });
   }
 }
-/* APENAS ASKOV */
+/* APENAS ASKOV ================================================================*/
 var baresAskov = [
   ['BAR BELLA', -23.547438, -46.649373, 4],
   ['', -23.546869, -46.649141, 5],
@@ -182,7 +199,7 @@ function setAskov(map) {
     });
   }
 }
-/* BARES CATUSKOV */
+/* BARES CATUSKOV ==============================================================*/
 var baresCatuSkov = [
   ['MAC FILL', -23.546414, -46.651015, 4],
   ['INDIO', -23.547750, -46.649416, 5],
