@@ -101,53 +101,34 @@ function initMap() {
   var infowindow = new google.maps.InfoWindow({
     content: contentString
   });
-  
+
   var marker = new google.maps.Marker({
     position: entreAmigos,
     map: map,
     title: 'ENTRE AMIGOS',
-    icon: 'images/catuaba1.png',
   });
   marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
-  
-  
-  var marker = new google.maps.Marker({
+    var marker = new google.maps.Marker({
     position: sucessos,
     map: map,
-    title: 'SUCESSOS',
-    icon: 'images/catuaba1.png'
+    title: 'SUCESSOS'
   });
-   marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-  
-  var marker = new google.maps.Marker({
-    position:deskolado,
-    map:map,
-    title: 'DESKOLADO',
-    icon: 'images/catuaba1.png'
+    var marker = new google.maps.Marker({
+      position:deskolado,
+      map:map,
+      title: 'DESKOLADO'
     });
-  marker.addListener('click', function() {
-  infowindow.open(map, marker);
-  });
-  
-  var marker = new google.maps.Marker({
-    position:morsas,
-    map:map,
-    title: 'MORSAS',
-    icon:'images/catuaba1.png'
+    var marker = new google.maps.Marker({
+      position:morsas,
+      map:map,
+      title: 'MORSAS'
     });
-  marker.addListener('click', function() {
-  infowindow.open(map, marker);
-  });
-  
-  var marker = new google.maps.Marker({
-    position:macbar,
-    map:map,
-    title:'MAC BAR',
-    icon: 'images/catuaba1.png',
+    var marker = new google.maps.Marker({
+      position:macbar,
+      map:map,
+      title:'MAC BAR'
     });
   marker.addListener('click', function() {
     infowindow.open(map, marker);
@@ -179,7 +160,7 @@ function setCatuaba(map) {
     var marker = new google.maps.Marker({
       position: {lat: bar[1], lng: bar[2]},
       map: map,
-      icon: 'images/catuaba1.png',
+      icon: imageCatuaba,
       shape: shape,
       title: bar[0],
       zIndex: bar[3]
