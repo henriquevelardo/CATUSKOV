@@ -1,0 +1,65 @@
+.center {
+    margin: 0 auto;
+    max-width: 1200px;
+    width:1200px;
+}
+body {
+    font-family: 'Maven Pro', sans-serif;
+    color: white;
+}
+h1 {
+    text-align: center;
+    margin:0;
+}
+p {
+    text-align: center;
+    margin:0;
+    margin-bottom: 20px
+}
+form input {
+    border-radius: 7px;
+}
+form {
+    margin:0 auto;
+    text-align: center;
+    float:none;
+    margin-bottom: 200px;
+}
+.nome {
+    width:250px;
+    text-align: center
+}
+.email {
+    width:300px;
+    text-align: center;
+}
+.texto {
+    margin: 0 auto;
+}
+h1 {
+    color:#d58cd9;
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.texto {
+    width:560px;
+    border-radius: 7px;
+    margin-top: 5px;
+    height: 200px;
+}
+.enviar {
+    background-color: white;
+    width:560px;
+    height:50px;
+    color:white;
+    font-size: 20px;
+    background-color:#331135;
+    border:none;
+    border-radius: 7px;
+}
+.enviar:hover {
+    background-color: #d58cd9 ;
+    cursor: pointer;
+}
