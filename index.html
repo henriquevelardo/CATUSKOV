@@ -42,6 +42,11 @@ function initMap() {
   var deskolado ={ lat:-23.547011, lng:-46.648929,}
   var morsas = {lat: -23.547270,lng: -46.648835,}
   var macbar = {lat: -23.547255,lng: -46.648930,}
+  var barBella = {lat: -23.547438, lng: -46.649373,}
+  var barx =  {lat: -23.546869, lng: -46.649141,}
+  var bary = {lat: -23.546951, lng: -46.648824,}
+  var morsas = {lat: -23.547248,lng: -46.648860,}
+  var baru = {lat:  -23.546705, lng:-46.648896,}
   var styles = [
   {
     "elementType": "geometry",
@@ -97,10 +102,10 @@ function initMap() {
       '</div>'+
       '</div>';
 
+  
   var infowindow = new google.maps.InfoWindow({
     content: contentString
   });
-
   var marker = new google.maps.Marker({
     position: entreAmigos,
     map: map,
@@ -132,6 +137,56 @@ function initMap() {
   marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
+  
+  var marker = new google.maps.Marker({
+    position:barBella,
+    map:map,
+    title:'BAR BELLA',
+    icon: 'images/askovM.png',
+    });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+  
+  var marker = new google.maps.Marker({
+    position:barx,
+    map:map,
+    title:'barx',
+    icon: 'images/askovM.png',
+    });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+  
+  var marker = new google.maps.Marker({
+    position:bary,
+    map:map,
+    title:'bary',
+    icon: 'images/askovM.png',
+    });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+  
+  var marker = new google.maps.Marker({
+    position:morsas,
+    map:map,
+    title:'MORSAS',
+    icon: 'images/askovM.png',
+    });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
+  var marker = new google.maps.Marker({
+    position:baru,
+    map:map,
+    title:'BARU',
+    icon: 'images/askovM.png',
+    });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });  
 }
 
 /* APENAS CATUABA =============================================================*/
@@ -191,7 +246,7 @@ function setAskov(map) {
     var markerA = new google.maps.Marker({
       position: {lat: barA[1], lng: barA[2]},
       map: map,
-      icon: imageAskov,
+      icon: 'images/askovM.png',
       shapeA: shapeA,
       title: barA[0],
       zIndex: barA[3]
