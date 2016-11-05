@@ -1,6 +1,6 @@
 var myVar;
 
-function myFunction() {
+function Mbox () {
     myVar = setTimeout(showPage, 3000);
 }
 
