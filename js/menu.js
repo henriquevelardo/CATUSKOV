@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $('.menu').hide
+    $('.menuX').hide
     $('.menu').click(function(){
         $('header ul li').css('display','block')
         $('.menu').css('display','none')

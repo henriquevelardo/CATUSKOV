@@ -67,7 +67,12 @@ h1 {
     background-color: #d58cd9 ;
     cursor: pointer;
 }
-
+.menu {
+        display:none;
+    }
+.menuX{
+    display:none;
+    }
 @media screen and (max-width: 480px){
     .center{
         max-width: 480px;
