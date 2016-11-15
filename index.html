@@ -109,6 +109,7 @@ function initMap() {
     icon: 'images/askovM.png',
     });
   marker.addListener('click', function() {
+    onclick = 'function(abrir)';
     infowindow.open(map, marker);
   });
   
