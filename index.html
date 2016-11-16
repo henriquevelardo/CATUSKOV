@@ -18,7 +18,7 @@
 </head>
 <body>
   </body>
-    
+    <div id='.abrir'></div>
 <div class="center">
     <header>
         <nav>
@@ -38,8 +38,8 @@
 </div>
     <section>
         <div class="boxBAR">
-            <h1> Bar Exemplo</h1>
-            <p> Rua Maria antonia, 94 0514848</p>
+            <h1> Morsas Bar </h1>
+            <p> Rua Maria Borba, 611 - 01221-020</p>
             <div class="askov">
                 <img src="images/skov.png">
                 <p> R$15,00</p>
@@ -270,6 +270,7 @@ function setAskov(map) {
       zIndex: barA[3]
     });
   }
+var markerA = '.abrir'
 }
 /* BARES CATUSKOV ==============================================================*/
 var baresCatuSkov = [
@@ -302,9 +303,14 @@ function setCatuSkov(map) {
     });
   }
 }
+    $(document).ready(function(){
+        $('.abrir').click(function(){
+            $('.boxBAR').css('display','block')
+    })
+});
     </script>
             </div>
-    <script async defer
+    <script async deferw
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUGb1xC7vOKsa_2PbrLc9shFbvqqCf9vc&signed_in=true&callback=initMap"></script>
     </section>
     <!--
