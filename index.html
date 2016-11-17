@@ -10,15 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="paginaface"></script>
     <script type="text/javascript" src="js/bootbox.min.js"></script>
-    <script type="text/javascript" src="/js/box.js"> </script>
+    <script type="text/javascript" src="js/box.js"> </script>
     <!-- <link rel="stylesheet" href="w3.css"> !-->
     <!-- <script type="text/javascript" src="carregarPagina.js"></script> !-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="jquary.js"></script>
+    <script src="js/box.js"></script>
 </head>
 <body>
-  </body>
-    <div id='.abrir'></div>
+<!--  MASK PARA OS MARCADORES !-->
+<div class="mask"> 
+    <div class="bar1"> </div>
+    <div class="bar2"> </div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+</div>
 <div class="center">
     <header>
         <nav>
@@ -37,7 +42,9 @@
     </header>
 </div>
     <section>
-        <div class="boxBAR">
+        <div id="map"> </div>
+        <div class="boxBAR ">
+            <img id="xfechar" src="images/xbox.png"/>
             <h1> Morsas Bar </h1>
             <p> Rua Maria Borba, 611 - 01221-020</p>
             <div class="askov">
@@ -50,20 +57,31 @@
             </div>
             <p id="textoA"> clique aqui para atualizar o preço </p>
         </div>
-        <div id="map">
-    <script>
-
+            </div>
+    <script async deferw
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUGb1xC7vOKsa_2PbrLc9shFbvqqCf9vc&signed_in=true&callback=initMap"></script>
+    </section>
+    <!--
+    <article>
+        <ul>
+             <a href="#onlyCatu"><li> CATUABA </li></a>
+             <a href="#onlyAskov"><li> ASKOV </li></a>
+        </ul>
+    </article> !-->
+     <footer>
+        <div class="center">
+          <p>CATU<span class="skov">SKOV</span> &copy; Lucca Dias - Henrique Lima - Felipe Gomes</p>
+        </div>
+    </footer>
+<script>
+$(document).ready(function(){
+   $('.boxBAR').css('display','none');
+    $('#abrir').click(function(){
+        $('.boxBAR').css('display','block');
+    })
+    });
+    
 function initMap() {
-  var entreAmigos = {lat: -23.546572, lng: -46.648925,};
-  var sucessos = {lat:-23.546994, lng:-46.649134,}
-  var deskolado ={ lat:-23.547011, lng:-46.648929,}
-  var morsas = {lat: -23.547270,lng: -46.648835,}
-  var macbar = {lat: -23.547255,lng: -46.648930,}
-  var barBella = {lat: -23.547438, lng: -46.649373,}
-  var barx =  {lat: -23.546869, lng: -46.649141,}
-  var bary = {lat: -23.546951, lng: -46.648824,}
-  var morsas = {lat: -23.547248,lng: -46.648860,}
-  var baru = {lat:  -23.546705, lng:-46.648896,}
   var styles = [
   {
     "elementType": "geometry",
@@ -78,11 +96,12 @@ function initMap() {
   {
     zoom: 18,
     center: {lat: -23.5469081, lng: -46.6490942},
-    mapTypeControl: true,
-    zoomControl: true,
+    mapTypeControl: false,
+    zoomControl: false,
     scrollwheel:false,
+    draggable:false,
     signInControl:false,
-    scaleControl: true,
+    scaleControl: false,
     mapTypeControlOptions: {
     style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
     mapTypeIds: [
@@ -99,112 +118,7 @@ function initMap() {
   var styledMap = new google.maps.StyledMapType( styles, {name: "Styled Map"} );
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
-  
-/* --- INFOBOX (n terminada)=================================================================*/
- /* var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-      '<div id="bodyContent">'+
-      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-      'sandstone rock formation in the southern part of the '+
-      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-      'south west of the nearest large town, Alice Springs; 450&#160;km '+
-      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-      'Aboriginal people of the area. It has many springs, waterholes, '+
-      'rock caves and ancient paintings. Uluru is listed as a World '+
-      'Heritage Site.</p>'+
-      '</div>'+
-      '</div>';
-  var infowindow = new google.maps.InfoWindow({
-    content: contentString
-  }); */
-  
-/* VARIAVEIS BOX CATU ====================================================================
-  var marker = new google.maps.Marker({
-    position: entreAmigos,
-    map: map,
-    title: 'ENTRE AMIGOS',
-  });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-    var marker = new google.maps.Marker({
-    position: sucessos,
-    map: map,
-    title: 'SUCESSOS'
-  });
-    var marker = new google.maps.Marker({
-      position:deskolado,
-      map:map,
-      title: 'DESKOLADO'
-    });
-    var marker = new google.maps.Marker({
-      position:morsas,
-      map:map,
-      title: 'MORSAS'
-    });
-    var marker = new google.maps.Marker({
-      position:macbar,
-      map:map,
-      title:'MAC BAR'
-    });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  }); */
-  /* VARIAVEIS BOX ASKOV =================================*/
-  
-  var marker = new google.maps.Marker({
-    position:barBella,
-    map:map,
-    title:'BAR BELLA',
-    icon: 'images/askovM.png',
-    });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-  
-  var marker = new google.maps.Marker({
-    position:barx,
-    map:map,
-    title:'barx',
-    icon: 'images/askovM.png',
-    });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-  
-  var marker = new google.maps.Marker({
-    position:bary,
-    map:map,
-    title:'bary',
-    icon: 'images/askovM.png',
-    });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-  
-  var marker = new google.maps.Marker({
-    position:morsas,
-    map:map,
-    title:'MORSAS',
-    icon: 'images/askovM.png',
-    });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-
-  var marker = new google.maps.Marker({
-    position:baru,
-    map:map,
-    title:'BARU',
-    icon: 'images/askovM.png',
-    });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });  
+    
 }
 
 /* APENAS CATUABA =============================================================*/
@@ -217,6 +131,7 @@ var bares = [
 ];
 
 function setCatuaba(map) {
+    
   var imageCatuaba = {
     url: 'images/catuaba1.png',
     origin: new google.maps.Point(0, 0),
@@ -227,6 +142,7 @@ function setCatuaba(map) {
     coords: [1, 1, 1, 20, 18, 20, 18, 1],
     type: 'poly'
   }; 
+    
   for (var i = 0; i < bares.length; i++) {
     var bar = bares[i];
     var marker = new google.maps.Marker({
@@ -238,6 +154,7 @@ function setCatuaba(map) {
       zIndex: bar[3]
     });
   }
+  
 }
 /* APENAS ASKOV ================================================================*/
 var baresAskov = [
@@ -247,14 +164,13 @@ var baresAskov = [
   ['MORSAS', -23.547248, -46.648860, 2],
   ['', -23.546705, -46.648896, 1]
 ];
-
-function setAskov(map) {
-  var imageAskov = {
+var imageAskov = {
     url: 'images/askovM.png',
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(0, 32)
   };
-  
+function setAskov(map) {
+    imageAskov;
    var shapeA = {
     coords: [1, 1, 1, 20, 18, 20, 18, 1],
     type: 'poly'
@@ -303,27 +219,8 @@ function setCatuSkov(map) {
     });
   }
 }
-    $(document).ready(function(){
-        $('.abrir').click(function(){
-            $('.boxBAR').css('display','block')
-    })
-});
+
     </script>
-            </div>
-    <script async deferw
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUGb1xC7vOKsa_2PbrLc9shFbvqqCf9vc&signed_in=true&callback=initMap"></script>
-    </section>
-    <!--
-    <article>
-        <ul>
-             <a href="#onlyCatu"><li> CATUABA </li></a>
-             <a href="#onlyAskov"><li> ASKOV </li></a>
-        </ul>
-    </article> !-->
-     <footer>
-        <div class="center">
-          <p>CATU<span class="skov">SKOV</span> &copy; Lucca Dias - Henrique Lima - Felipe Gomes</p>
-        </div>
-    </footer>
 </body>
+
 </html>

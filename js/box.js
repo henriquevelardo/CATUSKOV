@@ -1,7 +1,12 @@
-/*$(document).ready(function(){
-    var maker='.boxBAR';
-    $('.boxBAR').css('display','none')
-    $('.boxBAR').click(function(){
-        $('.boxBAR').css('display','block')
+$(document).ready(function(){
+    $('#xfechar').click(function(){
+        $('.boxBAR').animate({left:'-300'});
+    });
+    $('.bar1').click(function(){
+        $('.boxBAR').animate({
+            right:'300px',
+            left:'0px',
+        });
+    $('.boxBAR').css('display','block');
     })
 });
