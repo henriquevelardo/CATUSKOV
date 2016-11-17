@@ -45,15 +45,15 @@
         <div id="map"> </div>
         <div class="boxBAR ">
             <img id="xfechar" src="images/xbox.png"/>
-            <h1> Morsas Bar </h1>
-            <p> Rua Maria Borba, 611 - 01221-020</p>
+            <h1> Mercado Japa </h1>
+            <p> R. Dr. Cesário Mota Júnior, 515 - Vila Buarque</p>
             <div class="askov">
                 <img src="images/skov.png">
                 <p> R$15,00</p>
             </div>
             <div class="askov">
                 <img src="images/catuaba.png">
-                <p> R$10,00</p>
+                <p> R$14,00</p>
             </div>
             <p id="textoA"> clique aqui para atualizar o preço </p>
         </div>
@@ -95,7 +95,7 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'),
   {
     zoom: 18,
-    center: {lat: -23.5469081, lng: -46.6490942},
+    center: {lat: -23.5469081, lng: -46.649260},
     mapTypeControl: false,
     zoomControl: false,
     scrollwheel:false,
@@ -123,10 +123,10 @@ function initMap() {
 
 /* APENAS CATUABA =============================================================*/
 var bares = [
-  ['ENTRE AMIGOS', -23.546572, -46.648925, 4],
+  ['MERCADO', -23.546477, -46.648883, 4],
   ['SUCESSOS', -23.546994, -46.649134, 5],
-  ['DESKOLADO', -23.547011, -46.648929, 3],
-  ['MORSAS', -23.547270, -46.648835, 2],
+  ['DESKOLADO', -88.547011, -46.648929, 3],
+  ['MORSAS', -88.547270, -46.648835, 2],
   ['MAC BAR', -23.547255, -46.648930, 1]
 ];
 
@@ -158,11 +158,11 @@ function setCatuaba(map) {
 }
 /* APENAS ASKOV ================================================================*/
 var baresAskov = [
-  ['BAR BELLA', -23.547438, -46.649373, 4],
-  ['', -23.546869, -46.649141, 5],
-  ['', -23.546951, -46.648824, 3],
-  ['MORSAS', -23.547248, -46.648860, 2],
-  ['', -23.546705, -46.648896, 1]
+  ['BAR BELLA', -88.547438, -46.649373, 4],
+  ['SUCESSOS', -88.546869, -46.649141, 5],
+  ['DESKOLADO',-23.547046, -46.648882, 3],
+  ['MORSAS', -23.547294, -46.648798, 2],
+  ['INDIO', -23.547811, -46.649379, 1]
 ];
 var imageAskov = {
     url: 'images/askovM.png',
