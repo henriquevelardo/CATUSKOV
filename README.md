@@ -12,4 +12,3 @@
 - NPM 3.10.10 
 (https://docs.npmjs.com/cli/update)
 - git clone https://github.com/luccadias/CATUSKOV.git
-- npm install
