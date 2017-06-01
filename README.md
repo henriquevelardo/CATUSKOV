@@ -7,9 +7,9 @@
 |Lucca Arie Dias|
 |Henrique Velardo|
 
-- Nescessario Node.js
+- Last version Node.js
 (https://docs.npmjs.com/getting-started/installing-node)
-- NPM 3.10.10
-1 - git clone https://github.com/luccadias/CATUSKOV.git
-2 - npm installl ( para instalar todos os modulos )
-3 - 
+- NPM 3.10.10 
+(https://docs.npmjs.com/cli/update)
+- git clone https://github.com/luccadias/CATUSKOV.git
+- npm install
